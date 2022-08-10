@@ -14,6 +14,10 @@ class CliOptions {
 public:
     CliOptions(int argc, char *argv[]);
 
+    const std::string &getExecutablePath() const;
+
+    const std::vector<std::string> &getParameters() const;
+
 private:
     std::string executable_path;
     std::vector<std::string> parameters;

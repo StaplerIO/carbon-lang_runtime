@@ -43,3 +43,13 @@ CliOptions::CliOptions(int argc, char **argv)
         logging::log_fatal("Too few arguments! Format: executable_path parameter1 parameter2 ...");
     }
 }
+
+const std::string &CliOptions::getExecutablePath() const
+{
+    return executable_path;
+}
+
+const std::vector<std::string> &CliOptions::getParameters() const
+{
+    return parameters;
+}
