@@ -87,3 +87,6 @@ cmake-build-*
 
 # JetBrains Profile
 .idea/
+
+# VisualStudio Profile
+**/.vs
