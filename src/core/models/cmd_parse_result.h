@@ -6,17 +6,18 @@
 #ifndef CARBON_LANG_RUNTIME_CMD_PARSE_RESULT_H
 #define CARBON_LANG_RUNTIME_CMD_PARSE_RESULT_H
 
+#include "byte_stream.h"
+
 #define COMBINE_RS_CMD(root, sub) (root * 0x10 + sub)
 #define GET_ROOT(cmd) (cmd / 0x10)
 #define GET_SUB(cmd) (cmd % 0x10)
 
-struct cmd_parse_result {
+typedef struct {
     char root;
     char sub;
-    char *cmd_raw;
-    int len;
+    byte_stream *cmd_raw;
 
     void *target;
-};
+} cmd_parse_result;
 
 #endif //CARBON_LANG_RUNTIME_CMD_PARSE_RESULT_H
